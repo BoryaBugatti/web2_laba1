@@ -17,6 +17,17 @@ function validateForm(event) {
 }
 
 
+document.addEventListener("DOMContentLoaded", () => {
+    const formCard = document.querySelector(".form-card");
+    formCard.style.opacity = "0";
+    formCard.style.transform = "scale(0.9)";
+    setTimeout(() => {
+        formCard.style.transition = "all 0.5s ease";
+        formCard.style.opacity = "1";
+        formCard.style.transform = "scale(1)";
+    }, 300);
+});
+
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.querySelector("form");
     form.addEventListener("submit", validateForm);
